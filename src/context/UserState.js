@@ -2,12 +2,19 @@ import { useEffect, useState } from "react";
 import UserContext from "./userContext";
 import axios from "axios";
 
+const initialState = {
+  first_name: "",
+  last_name: "",
+  email: "",
+  avatar: "",
+};
+
 const UserState = (props) => {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(initialState);
   useEffect(() => {
     const fetchUser = async () => {
       const usr = await axios.get("https://reqres.in/api/users?page=2");
-      setUser(usr.data.data);
+      setUser(usr.data);
     };
 
     fetchUser();
