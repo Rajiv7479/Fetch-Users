@@ -14,3 +14,27 @@
   margin-top: 20px;
   width: 100%;
 }
+.form {
+  width: 100%;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputFields {
+  width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.nameField {
+  display: flex;
+}
+.emailField {
+  width: 100%;
+}

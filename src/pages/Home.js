@@ -4,6 +4,7 @@ import userContext from "../context/userContext";
 import { Container } from "@mui/system";
 import "./style.css";
 import User from "./User";
+import Form from "./Form";
 
 const Home = () => {
   const userList = useContext(userContext);
@@ -15,6 +16,9 @@ const Home = () => {
     <>
       <Container container maxWidth={"lg"} className="container">
         <div className="title">User List</div>
+        <div className="form">
+          <Form />
+        </div>
         {users &&
           users.map((user) => {
             return (

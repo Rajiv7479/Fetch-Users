@@ -13,7 +13,7 @@ const UserState = (props) => {
   const [user, setUser] = useState(initialState);
   useEffect(() => {
     const fetchUser = async () => {
-      const usr = await axios.get("https://reqres.in/api/users?page=2");
+      const usr = await axios.get("https://reqres.in/api/users?page=1");
       setUser(usr.data);
     };
 
